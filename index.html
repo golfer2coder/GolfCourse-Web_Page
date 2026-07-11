@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hometown GC Golf Course — Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://dogwoodlakesgolfcourse.com/" target="_blank" rel="noopener">
+        <img src="images/course_logo_1.png" alt="Hometown GC logo" width="96" height="96" />
+        <span class="brand-text">Hometown GC</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item dropdown">
+            <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Golf</button>
+            <ul class="dropdown-menu" role="menu" aria-label="Golf menu">
+              <li role="none"><a role="menuitem" href="#about">About the Course</a></li>
+              <li role="none"><a role="menuitem" href="#scorecard">Scorecard</a></li>
+              <li role="none"><a role="menuitem" href="#events">Events</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Cafe</button>
+            <ul class="dropdown-menu" role="menu" aria-label="Cafe menu">
+              <li role="none"><a role="menuitem" href="#menu">Menu</a></li>
+              <li role="none"><a role="menuitem" href="#hours">Hours</a></li>
+              <li role="none"><a role="menuitem" href="#catering">Catering</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Rates</button>
+            <ul class="dropdown-menu" role="menu" aria-label="Rates menu">
+              <li role="none"><a role="menuitem" href="#green-fees">Green Fees</a></li>
+              <li role="none"><a role="menuitem" href="#memberships">Memberships</a></li>
+              <li role="none"><a role="menuitem" href="#discounts">Discounts</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+          <li class="nav-item cta">
+            <a class="tee-snap" href="https://teesnap.com/" target="_blank" rel="noopener noreferrer">Book Tee Time</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Hometown GC Golf Course</h1>
+        <p class="lead">A golf experience like no other — rolling greens, strategic bunkers, and scenic views.</p>
+        <p class="hero-actions">
+          <a class="btn btn-primary" href="#book">Book a Tee Time</a>
+          <a class="btn btn-outline" href="#learn">Learn More</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="container content-block">
+      <h2>About the Course</h2>
+      <p>Hometown GC is a nature filled course located in Hometown, FL. The layout rewards strategy and shot placement while offering a welcoming experience for players of all levels.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Course Features</h3>
+          <p>Rolling fairways; challenging bunkers; scenic holes; practice facilities.</p>
+        </article>
+        <article class="card">
+          <h3>Memberships</h3>
+          <p>Flexible membership options for individuals and families.</p>
+        </article>
+        <article class="card">
+          <h3>Events</h3>
+          <p>Host tournaments, outings, and private events with on-site support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="news" class="container content-block">
+      <h2>What People Are Saying</h2>
+      <blockquote class="testimonial">
+        “Great course, interesting layout. Plenty of challenge to be had.” — William
+      </blockquote>
+    </section>
+
+    <section id="contact" class="container content-block">
+      <h2>Location and Hours</h2>
+      <address>
+        <strong>1234 Country Club Drive</strong><br />
+        Hometown, FL 12345<br />
+        <a href="tel:+15555555555">(555) 555-5555</a><br />
+        Hours: Monday–Sunday 7:00am–5:00pm
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© <span id="year"></span> Hometown GC Golf Course</p>
+      </div>
+      <div class="footer-right">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script: mobile toggle, click-to-open on mobile, hover + mouseleave on desktop, keyboard support -->
+  <script>
+    (function () {
+      const navToggle = document.getElementById('nav-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const DROPDOWN_BREAKPOINT = 900;
+
+      // Mobile nav toggle
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        mainNav.classList.toggle('open');
+      });
+
+      // Utility: close all dropdowns
+      function closeAllDropdowns() {
+        document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+          const btn = item.querySelector('.drop-btn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+          item.classList.remove('open');
+        });
+      }
+
+      // Click handlers for dropdown buttons (keeps mobile behavior)
+      document.querySelectorAll('.drop-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const parent = btn.parentElement;
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+          // close other dropdowns
+          document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+            if (item !== parent) {
+              const otherBtn = item.querySelector('.drop-btn');
+              if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+              item.classList.remove('open');
+            }
+          });
+
+          btn.setAttribute('aria-expanded', String(!expanded));
+          parent.classList.toggle('open');
+        });
+      });
+
+      // Close dropdowns when clicking outside nav
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.main-nav')) {
+          closeAllDropdowns();
+        }
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+          closeAllDropdowns();
+          if (mainNav.classList.contains('open')) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+
+      // Close when focus moves outside the nav (keyboard users)
+      document.addEventListener('focusin', (e) => {
+        if (!e.target.closest('.main-nav')) {
+          closeAllDropdowns();
+        }
+      });
+
+// Improved enter/leave handling with a short close delay
+document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+  let closeTimer = null;
+  const btn = item.querySelector('.drop-btn');
+  const menu = item.querySelector('.dropdown-menu');
+
+  function openItem() {
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+    item.classList.add('open');
+    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+  }
+
+  function closeItem() {
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    item.classList.remove('open');
+  }
+
+  // Entering the button or menu opens / cancels close
+  item.addEventListener('mouseenter', () => {
+    if (window.innerWidth >= 900) openItem();
+  });
+  if (menu) {
+    menu.addEventListener('mouseenter', () => {
+      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      if (window.innerWidth >= 900) openItem();
+    });
+  }
+
+  // Leaving starts a short timer to close; canceled if re-entered
+  item.addEventListener('mouseleave', () => {
+    if (closeTimer) clearTimeout(closeTimer);
+    closeTimer = setTimeout(() => closeItem(), 100); // 120–250ms works well
+  });
+  if (menu) {
+    menu.addEventListener('mouseleave', () => {
+      if (closeTimer) clearTimeout(closeTimer);
+      closeTimer = setTimeout(() => closeItem(), 100);
+    });
+  }
+});
+
+
+
+      // Ensure dropdowns close when resizing to avoid stuck states
+      window.addEventListener('resize', () => {
+        closeAllDropdowns();
+        if (mainNav.classList.contains('open') && window.innerWidth >= DROPDOWN_BREAKPOINT) {
+          mainNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Footer year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

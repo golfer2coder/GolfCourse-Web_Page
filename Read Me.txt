@@ -1,0 +1,6 @@
+Build a Golf course web app based on https://dogwoodlakesgolfcourse.com/ website.
+
+Using the Home page layout and the TeeSnap booking pages.
+
+A possible solution for a starting template for using a DB and API on GitHub?
+https://github.com/fastapi/full-stack-fastapi-template
