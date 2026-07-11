@@ -1,4 +1,6 @@
+/* Protected by Git  Author  Phil Cleveland July 2026 */
 /* Basic reset */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #222; background: #fff; }
 
@@ -9,7 +11,7 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   padding: 1rem;
 }
 
-/* Header — doubled height and balanced spacing */
+/* Header ï¿½ doubled height and balanced spacing */
 .site-header {
   background: linear-gradient(90deg, #071f6dd8 0%, #1106a5 100%);
   color: #fff;
