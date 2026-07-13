@@ -9,9 +9,9 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   padding: 1rem;
 }
 
-/* Header — doubled height and balanced spacing */
+/* Header ï¿½ doubled height and balanced spacing */
 .site-header {
-  background: linear-gradient(90deg, #071f6dd8 0%, #1106a5 100%);
+  background: #0c294ee5;
   color: #fff;
   position: sticky;
   top: 0;
@@ -62,21 +62,22 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   border: none;
   cursor: pointer;
   font-weight: 600;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Times New Roman', Times, serif;
   font-size: larger;
 }
-.nav-item a:hover, .drop-btn:hover { background: rgba(255,255,255,0.08); }
+
+.nav-item:hover, .drop-btn:hover { background: rgba(255,255,255,0.08); }
 
 /* CTA / Tee-Snap button */
 .cta .tee-snap {
-  background: #40be05;
+  background: #6ab846cb;
   color: #f3f7f4;
   padding: 0.5rem 0.9rem;
-  border-radius: 6px;
+  border-radius: 20px;
   font-weight: 700;
   text-decoration: none;
 }
-.cta .tee-snap:hover { background: #69ee4f; }
+.cta .tee-snap:hover { background: #5da13dd3; }
 
 /* Dropdown menu */
 .dropdown .dropdown-menu {
@@ -84,8 +85,7 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   left: 0;
   top: calc(100% + 8px);
   min-width: 200px;
-  background: #fff;
-  color: #111;
+  background: #0c294ee5;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   padding: 0.5rem 0;
@@ -93,16 +93,26 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   z-index: 1100;
 }
 .dropdown.open .dropdown-menu { display: block; }
-.dropdown .dropdown-menu li { list-style: none; }
 .dropdown .dropdown-menu a {
   display: block;
   padding: 0.5rem 1rem;
-  color: #111;
+  color: white;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
 }
-.dropdown .dropdown-menu a:hover { background: #f3f3f3; }
+
+/* CRITICAL PART: Change color of the item on hover */
+  .dropdown-content a:hover {
+    background-color: #2ecc71; /* Changes background to green */
+    color: white;              /* Changes text color to white */
+}
+.dropdown .dropdown-menu li { list-style: none; }
+.dropdown .dropdown-menu li a:hover{
+    color: wheat;  
+  }
+
+.dropdown .dropdown-menu a:hover { background: #0c294ee5; }
 
 /* Mobile nav toggle */
 .nav-toggle { display: none; background: transparent; border: none; color: inherit; cursor: pointer; margin-left: auto; }
