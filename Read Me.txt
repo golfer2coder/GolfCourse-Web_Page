@@ -1,9 +1,0 @@
-Build a Golf course web app based on https://dogwoodlakesgolfcourse.com/ website.
-
-Using the Home page layout and the TeeSnap booking pages.
-
-GitHub respository:  Username:  golfer2coder	Password:  18holesCart
-Repository Name:  HometownGC.com
-
-Published Link:
-https://golfer2coder.github.io/GolfCourse-Web_Page/
