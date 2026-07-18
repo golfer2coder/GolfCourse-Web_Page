@@ -170,15 +170,23 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   font-size: 1rem;
 }
 
-
+/* Information sections About, Booking, Memberships */
+.course-content {
+  background-color: darkgreen;
+  color: whitesmoke;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
 
 
 
 
 /* Content blocks */
-.content-block { padding: 2rem 0; }
+/* .content-block { padding: 2rem 0; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
 .card { background: #f9f9f9; padding: 1rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+*/
 
 /* Footer */
 .site-footer { border-top: 1px solid #eee; padding: 1rem 0; background: #fff; color: #333; }
@@ -191,6 +199,26 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
 @media (min-width: 900px) {
   .dropdown:hover .dropdown-menu { display: block; }
 }
+
+.flat-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid #000000;
+    border-radius: 0px;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.flat-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+
 
 /* Responsive */
 @media (max-width: 900px) {
