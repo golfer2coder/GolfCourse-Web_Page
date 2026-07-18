@@ -1,0 +1,19 @@
+Creating a new local branch, working in that branch. After fully testing
+merge that branch back into the local main branch. Then push this local
+main branch to GitHub.
+
+# 1. Create and switch to the 'About' branch
+git switch -c About
+
+# 2. After editing index.htm, stage and commit your changes
+git add index.htm
+git commit -m "Add About section to index.htm"
+
+# 3. Switch back to your local main branch
+git switch main
+
+# 4. Merge the 'About' branch into main
+git merge About
+
+# 5. Push the updated main branch to GitHub
+git push origin main
