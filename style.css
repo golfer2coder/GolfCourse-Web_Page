@@ -157,6 +157,7 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   width: 100%;
   height: auto;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .hero-item h3 {
@@ -170,6 +171,53 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   font-size: 1rem;
 }
 
+/*  Start Testing of Image with text overlay here */
+
+.image-link {
+      text-decoration: none; /* removes underline on link */
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      overflow: hidden;
+      cursor: pointer; 
+      position: relative;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .overlay-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-family: Arial, sans-serif;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .image-container:hover .overlay-text {
+      opacity: 1;
+    }
+
+/*  End Testing of Image with text overlay here */
+
+
+
 /* Information sections About, Booking, Memberships */
 .course-content {
   background-color: darkgreen;
@@ -178,8 +226,6 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
   padding-bottom: 50px;
   padding-top: 20px;
 }
-
-
 
 
 /* Content blocks */
