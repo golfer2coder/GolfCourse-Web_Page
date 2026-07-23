@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SmallTown Golf Course — Demo</title>
+  <title>Hometown Golf Course — Demo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
+
       <a href="index.html" class="image-link" />
-      <img src="images/course_logo.png" alt="SmallTown GC logo" width="96" height="96" />
-       <a href="index.html"style="margin: 0px; padding: 0px; color: white;">SmallTown Golf Course <br> Smallville, FL</a>
+      <img src="images/course_logo.png" alt="Hometown GC logo" width="96" height="96" />
+       <a href="index.html"style="margin: 0px; padding: 0px; color: white;">HomeTown Golf Course <br> Smallville, FL</a>
 
       <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
         <span class="sr-only">Toggle navigation</span>
@@ -23,28 +24,33 @@
           <li class="nav-item dropdown">
             <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Golf</button>
             <ul class="dropdown-menu" role="menu" aria-label="Golf menu">
-              <li role="none"><a role="menuitem" href="about.html#rates">Rates</a></li>
-              <li role="none"><a role="menuitem" href="about.html#scorecard">Scorecard</a></li>
-              <li role="none"><a role="menuitem" href="about.html#course">Course</a></li>
-              <li role="none"><a role="menuitem" href="about.html#lessons">Lessons</a></li>
-              <li role="none"><a role="menuitem" href="about.html#practice">Practice Facilities</a></li>
-              <li role="none"><a role="menuitem" href="about.html#proshop">ProShop</a></li>
+              <li role="none"><a role="menuitem" href="#about">About the Course</a></li>
+              <li role="none"><a role="menuitem" href="#scorecard">Scorecard</a></li>
+              <li role="none"><a role="menuitem" href="#events">Events</a></li>
             </ul>
           </li>
 
           <li class="nav-item dropdown">
-            <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Dining</button>
+            <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Cafe</button>
             <ul class="dropdown-menu" role="menu" aria-label="Cafe menu">
-              <li role="none"><a role="menuitem" href="dining.html#menu">Menu</a></li>
-              <li role="none"><a role="menuitem" href="dining.html#hours">Hours</a></li>
-              <li role="none"><a role="menuitem" href="dining.html#order">Order Ahead</a></li>
+              <li role="none"><a role="menuitem" href="#menu">Menu</a></li>
+              <li role="none"><a role="menuitem" href="#hours">Hours</a></li>
+              <li role="none"><a role="menuitem" href="#catering">Catering</a></li>
             </ul>
           </li>
 
-
+          <li class="nav-item dropdown">
+            <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Rates</button>
+            <ul class="dropdown-menu" role="menu" aria-label="Rates menu">
+              <li role="none"><a role="menuitem" href="#golfingfees">Golfing Fees</a></li>
+              <li role="none"><a role="menuitem" href="#rangeballs">Range Balls</a></li>
+              <li role="none"><a role="menuitem" href="#golflessons">Golf Lessons</a></li>
+            </ul>
+          </li>
 
           <li class="nav-item"><a href="#memberships">Memberships</a></li>
 
+          <li class="nav-item"><a href="#contact">Contact</a></li>
           <li class="nav-item cta">
             <a class="tee-snap" href="https://teesnap.com/" target="_blank" rel="noopener noreferrer">Book Tee Time</a>
           </li>
@@ -58,75 +64,12 @@
     <img src="images/coursehead.png" alt="Description" style="width: 60%; height: 400px">
     </div>
   <div class="herohead">
-    <h1>SmallTown Golf Course</h1>
+    <h1>HomeTown Golf Course</h1>
     <h2>Located in beutiful Smalltown, Fl</h2>
   </div>
 <section class="hero">
-  <div class="hero-container">
-    
-<!-- About Image Link to section in this page -->
-	<div class="hero-item">    
-		<a href="about.html" class="image-link" />
-			<div class="image-container">
-				<img src="images/aboutheroimg.png" alt="Sample" />
-				<div class="overlay-text">More about our facility</div>
-			</div>
-		<a href="about.html" class="flat-button">About Our Course</a>
-	</div>	
-	
-<!-- Booking Tee Times Image Link to section in this page  -->
-    <div class="hero-item">
-      <a href="#booking" class="image-link" />
-        <div class="image-container">
-          <img src="images/bookteetimeimg.png" alt="Booking Tee Times">
-          <div class="overlay-text">Go to Booking Tee Times</div>
-        </div>
-      <a href="#booking" class="flat-button">Booking Tee Times</a>
-    </div>
 
- <!-- Memberships Image Link to section in this page  -->
-    <div class="hero-item">
-      <a href="#memberships" class="image-link" />
-        <div class="image-container">
-          <img src="images/membershipimg.png" alt="Membeships">          
-          <div class="overlay-text">Go to Memberships</div>
-        </div>
-      <a href="#memberships" class="flat-button">Memberships</a>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="course-content">
-  <!-- The About Section  -->
-<h2>About Our Facility</h2>
-<p> This is the section for the About information </p>
-<p>The Course:  </p>
-<p>Built in 1994 this is a Par 72 Championship course designed by John Doe. </p>
-</section>
-
-<section id="booking">
-  <!-- Booking Tee Times  -->
-<h2>Booking Tee Times</h2>
-<p>This section is for Booking Tee Times</p>
-</section>
-
-<section id="memberships">
-  <!-- Memberships Information Section  -->
-<h2>Membership Information</h2>
-<p> This is the section for Membership information </p>
-</section>
-
-
-
-
-<!-- Create an About section here with information about the course linked from the image aboutheroimg above --> 
-<div class="container">
-  <p>About our cousrse
-    About our Instructors
-    About our practice area
-  </p>
-</div>
-
+  
   <!-- Script: mobile toggle, click-to-open on mobile, hover + mouseleave on desktop, keyboard support -->
   <script>
     (function () {

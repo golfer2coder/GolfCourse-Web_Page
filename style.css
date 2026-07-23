@@ -125,20 +125,20 @@ html, body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Ro
 /* Hero Header Container */
 .herohead {
   text-align: center;
-  background-color: rgb(130, 190, 130);
+  background-color: rgba(3, 97, 18, 0.918);
 }
 .herohead h1{
-  color: darkblue;
+  color: white;
   font-family: Garamond, serif;
 }
 .herohead h2 {
-  color: lightblue;
+  color: whitesmoke;
 }
 
 /* New Hero 3 column layout with images and test */
 .hero {
   padding: 60px 20px;
-  background: #a3dbaf;
+  background: rgba(3, 97, 18, 0.918);
   text-align: center;
 }
 
